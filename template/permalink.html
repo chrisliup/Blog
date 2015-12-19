@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block content %}	
+	{{item.render() | safe}}	
+	<form method = "get">
+		<div style = "text-align: center;">
+			{% if cur_user and cur_user.username == item.author %}
+				<button class="myButton" id = "edit_button" formaction = "/blog/editpost">Edit</button>
+				<button class="myButton" id = "delete_button" formmethod = "post">Delete</button>
+			{% endif %}
+			<button class="myButton" formaction = "/blog">Back</button>
+		</div>
+	</form>
+	
+
+{% endblock %}

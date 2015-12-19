@@ -1,0 +1,62 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div style = "text-align: center">
+<h2> Signup </h2>
+<form method = "post">	
+	<table style = "margin-left: 185px">
+		<tr>
+			<td style = "text-align: right">
+				Username
+			</td>
+			<td>
+				<input type="text" name="username" value="{{username}}" style = "width: 200px">
+			</td>
+			<td style = "color: red; text-align: left">
+				{{username_error}}
+			</td>
+		</tr>
+		<tr>
+			<td style = "text-align: right">
+				Password
+			</td>
+			<td>
+				<input type="password" name="password" value=""  style = "width: 200px">
+			</td>
+			<td style = "color: red; text-align: left">
+				{{password_error}}
+			</td>
+		</tr>
+		<tr>
+			<td style = "text-align: right">
+				Verify Password
+			</td>
+			<td>
+				<input type="password" name="verify" value=""  style = "width: 200px">
+			</td>
+			<td style = "color: red; text-align: left">
+				{{verify_error}}
+			</td>
+		</tr>
+		<tr>
+			<td style = "text-align: right">
+				Email (Optional)
+			</td>
+			<td>
+				<input type="text" name="email" value="{{email}}"  style = "width: 200px">
+			</td>
+			<td style = "color: red; text-align: left">
+				{{email_error}}
+			</td>
+		</tr>
+	</table>
+	<label>Remember me
+	<input type = "checkbox" name = "remember_user"></label>
+	<br>	
+	<button class = "myButton"> Sign Up </button>
+</form>
+<br>
+<a href = "/blog/login">Already signed up? Login now!</a>
+</div>
+
+{% endblock %}

@@ -1,0 +1,15 @@
+<div class="post">
+	<div class="post-heading">
+		<a href="/blog/{{item.key().id()}}" class="post-title">{{item.subject}}
+		</a>		
+	</div>
+	<div class="post-date">
+		Created by {{item.author}} on {{item.datetime_created.strftime("%A, %d. %B %Y %I:%M%p")}}.		
+		{% if item.hasattr('datetime_modified')  %}
+			Last modified on {{item.datetime_modified.strftime("%a, %d %b %Y %H:%M:%S")}}.
+		{% endif %}
+	</div>
+	<br>
+	<div class="post-content">{{item.content | safe}}</div>
+</div>
+<br><br>

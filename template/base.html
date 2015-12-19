@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+	  <link type="text/css" rel="stylesheet" href="/static/main.css" />
+
+	  <title>LYC&amp;LLY Blog</title>
+	</head>
+
+	<body>
+		<a href="/blog" class="main-title">
+			LYC&amp;LLY Blog
+		</a>
+		<div class="login-area">    
+			{% if curr_user %}
+	       		{{curr_user}} (<a class="login-link" href="/blog/logout">logout</a>)	 
+	       	{% else %}
+       		    <a class="login-link" href="/blog/login">login</a>
+      			|
+      			<a class="login-link" href="/blog/signup">signup</a>
+	       	{% endif %}
+
+	  	</div>
+		<div id="content">
+			{% block content %}
+			{% endblock %}
+		</div>
+
+	</body>
+</html>

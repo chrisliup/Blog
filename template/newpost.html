@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% block content %}
+	<div style = "text-align: center;">
+		<h2>New Post</h2>		
+		<form method = "post">
+			<label style = "position:relative; text-align:left; left:150px">Subject: </label>
+			<input type = "text" name = "subject" value = "{{subject}}">
+			<div class = "error" style = "right: 150px">
+				{{subject_error_msg}}<br>
+			</div>
+			<label style = "position:relative; text-align:left; left:150px">Content: </label>
+			<textarea name = "content", style = "white-space: pre">{{content}}</textarea>
+			<div class = "error" style = "right: 150px">
+				{{content_error_msg}}<br>
+			</div>			
+			<button class = "myButton" formmethod = "post">Post</button>
+			<button class = "myButton" formaction = "/blog" formmethod = "get">Back</button>
+		</form>		
+	</div>
+
+{% endblock %}

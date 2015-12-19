@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+{% block content %}
+	<form method = "get" action="/blog/newpost">
+		<div style = "text-align: center;">
+			<button class="myButton">New Post</button>
+		</div>
+	</form>
+	<br><br>
+	{% for item in items %}
+		{{item.render() | safe}}		
+	{% endfor %}
+
+{% endblock %}

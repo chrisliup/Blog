@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div style = "text-align: center">
+<h2> Login </h2>
+<form method = "post">	
+	<table style = "position:relative; left: 225px">
+		<tr>
+			<td style = "text-align: right">
+				Username
+			</td>
+			<td>
+				<input type="text" name="username" value="{{username}}" style = "width: 200px">
+			</td>
+			<td style = "color: red; text-align: left">
+				{{username_error}}
+			</td>
+		</tr>
+		<tr>
+			<td style = "text-align: right">
+				Password
+			</td>
+			<td>
+				<input type="password" name="password" value=""  style = "width: 200px">
+			</td>
+			<td style = "color: red; text-align: left">
+				{{password_error}}
+			</td>
+		</tr>		
+	</table>
+	<label>Remember me
+	<input type = "checkbox" name = "remember_user"></label>
+	<br>
+	<button class = "myButton"> Log in </button>	
+</form>
+<br>
+<a href = "/blog/signup">Not signed up yet? Sign up now!</a>
+</div>
+
+{% endblock %}
