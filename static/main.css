@@ -119,8 +119,8 @@ input[type=submit] {
 .post-content {
     position: relative;
     margin-top: 5px;
-    line-height: 70%;    
-    white-space: pre;
+    line-height: 100%;    
+    white-space: pre-wrap;
     font-family: monospace;
 }
 
